@@ -1,0 +1,1 @@
+This repo serves as my final project for a class in continuous mathematics. Further development of this project, while not guaranteed, can be expanded if problems are simple or solution ideas are offered when conflicts arise.
