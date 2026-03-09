@@ -9,6 +9,6 @@ project is turned in.
 - matplotlib
 
 ## License
-Details for the license can be found above. TLRD; I intend for this repo to be used for my project and if 
+Details for the license can be found above. TLDR; I intend for this repo to be used for my project and if 
 any educators or students want to use it for their projects and lessons, that is fine as long as proper attribution
 is given and all other conditions of the license are satisfied.
