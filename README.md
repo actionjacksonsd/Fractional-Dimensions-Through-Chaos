@@ -4,9 +4,12 @@ be some future updates to the Repo as issues come up, but currently there are no
 project is turned in.
 
 ## Dependencies
+A requirements.txt file has been added for conveinence, but if you want to know what libraries need to be installed:
 - customtkinter
 - numpy
 - matplotlib
+
+[How to use requirements.txt with PIP](https://www.geeksforgeeks.org/python/how-to-install-python-packages-with-requirements-txt/)
 
 ## License
 Details for the license can be found above. TLDR; I intend for this repo to be used for my project and if 
