@@ -68,7 +68,7 @@ class FractalExplorer(ctk.CTk):
             self.control_frame,
             from_=0.0,
             to=1.0,
-            number_of_steps=100,  # 0.01 steps (easy dragging)
+            number_of_steps=100,
             command=self.update_ratio
         )
         self.ratio.set(0.5)
@@ -135,7 +135,7 @@ class FractalExplorer(ctk.CTk):
     def set_precise_ratio(self):
         try:
             value = float(self.ratio_entry.get())
-            value = max(0.001, min(0.999, value))  # clamp
+            value = max(0.001, min(0.999, value))
             self.ratio.set(value)
             self.update_ratio(value)
         except ValueError:
