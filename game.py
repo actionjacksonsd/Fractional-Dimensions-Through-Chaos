@@ -128,8 +128,7 @@ class FractalExplorer(ctk.CTk):
 
     def update_auto_ratio_label(self):
         n = int(self.vertices.get())
-        base_ratio = 1 / (1 + 2 * np.cos(np.pi / n))
-        ratio = 1 - base_ratio
+        ratio = self.calc_ratio(n)
         self.ratio_label.configure(text=f"Ratio: {ratio:.3f} (auto)")
 
     def set_precise_ratio(self):
@@ -148,8 +147,7 @@ class FractalExplorer(ctk.CTk):
         points = int(self.points.get())
 
         if self.auto_ratio.get():
-            base_ratio = 1 / (1 + 2 * np.cos(np.pi / vertices))
-            ratio = 1 - base_ratio
+            ratio = self.calc_ratio(vertices)
         else:
             ratio = self.ratio.get()
 
@@ -175,6 +173,15 @@ class FractalExplorer(ctk.CTk):
         self.ax.axis("off")
 
         self.canvas.draw()
+
+    def calc_ratio(self, n):
+        mod = n % 4
+        if mod == 0:
+            return 1 / (1 + np.tan(np.pi / n))
+        elif mod == 1 or mod == 3:
+            return 1 / (1 + 2 * np.sin(np.pi / (2 * n)))
+        else:
+            return 1 / (1 + np.sin(np.pi / n))
 
 
 # ----- run -----
